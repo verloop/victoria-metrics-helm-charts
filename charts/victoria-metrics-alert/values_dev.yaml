@@ -380,7 +380,7 @@ serviceMonitor:
 
 alertmanager:
   # -- Create alertmanager resources
-  enabled: false
+  enabled: true
   # -- Alertmanager Pod metadata
   podMetadata:
     labels: {}
