@@ -158,7 +158,7 @@ server:
   # Multiple notifiers can be enabled by using `notifiers` section
   notifier:
     alertmanager:
-      url: ""
+      url: "http://victoria-alert-alertmanager.default.svc.cluster.local:9093"
       # -- Basic auth for alertmanager
       basicAuth:
         username: ""
