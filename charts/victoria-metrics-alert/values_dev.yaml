@@ -114,7 +114,7 @@ server:
   # -- VMAlert reads metrics from source, next section represents its configuration. It can be any service which supports
   # MetricsQL or PromQL.
   datasource:
-    url: ""
+    url: "http://victoria-victoria-metrics-cluster-vmselect.default.svc.cluster.local:8481/select/__all__/prometheus"
     # -- Basic auth for datasource
     basicAuth:
       username: ""
@@ -331,7 +331,8 @@ server:
   # -- VMAlert configuration
   config:
     alerts:
-      groups: []
+      groups: 
+        - name: sla_alerts
 
   # -- Vertical Pod Autoscaler
   verticalPodAutoscaler:
