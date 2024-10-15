@@ -114,7 +114,7 @@ server:
   # -- VMAlert reads metrics from source, next section represents its configuration. It can be any service which supports
   # MetricsQL or PromQL.
   datasource:
-    url: "http://victoria-victoria-metrics-cluster-vmselect.default.svc.cluster.local:8481/select/__all__/prometheus"
+    url: "http://victoria-victoria-metrics-cluster-vmselect.sla.svc.cluster.local:8481/select/multitenant/prometheus"
     # -- Basic auth for datasource
     basicAuth:
       username: ""
@@ -158,7 +158,7 @@ server:
   # Multiple notifiers can be enabled by using `notifiers` section
   notifier:
     alertmanager:
-      url: "http://victoria-alert-alertmanager.default.svc.cluster.local:9093"
+      url: "http://victoria-alert-alertmanager.sla.svc.cluster.local:9093"
       # -- Basic auth for alertmanager
       basicAuth:
         username: ""
@@ -173,7 +173,7 @@ server:
   # -- Additional notifiers to use for alerts
   notifiers:
     - alertmanager:
-        url: "http://victoria-alert-alertmanager.default.svc.cluster.local:9093"
+        url: "http://victoria-alert-alertmanager.sla.svc.cluster.local:9093"
         # -- Basic auth for alertmanager
         basicAuth:
           username: ""
