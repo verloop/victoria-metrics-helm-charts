@@ -202,14 +202,17 @@ server:
 
   # -- Extra Volumes for the pod
   extraVolumes:
-    []
+    - name: nfs-fs
+      persistentVolumeClaim:
+        claimName: nfs-common-pvc
     #- name: example
     #  configMap:
     #    name: example
 
   # -- Extra Volume Mounts for the container
   extraVolumeMounts:
-    []
+    - name: nfs-fs
+      mountPath: /config
     # - name: example
     #   mountPath: /example
 
