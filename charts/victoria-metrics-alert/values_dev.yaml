@@ -451,7 +451,7 @@ alertmanager:
       resolve_timeout: 5m
     route:
       # default receiver
-      receiver: devnull
+      receiver: 'web.hook'
       # tag to group by
       group_by: ["alertname"]
       # How long to initially wait to send a notification for a group of alerts
@@ -461,7 +461,9 @@ alertmanager:
       # How long to wait before sending a notification again if it has already been sent successfully for an alert
       repeat_interval: 24h
     receivers:
-      - name: devnull
+      - name: 'web.hook'
+        webhook_configs:
+          - url: 'http://sla.default.svc.cluster.local:3000/handleAlertManagerNotification'
   # -- Alertmanager extra templates
   templates: {}
   #  alertmanager.tmpl: |-
