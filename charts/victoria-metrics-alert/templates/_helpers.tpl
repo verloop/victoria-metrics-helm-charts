@@ -251,7 +251,7 @@ http://{{- include "vmalert.alertmanager.fullname" . -}}:9093{{ .Values.alertman
 {{- define "vmalert.args" -}}
   {{- $app := .Values.server -}}
   {{- $args := default dict -}}
-  {{- $_ := set $args "rule" "/config/alert-rules.yaml" -}}
+  {{- $_ := set $args "rule" "/custom-config/alert-rules.yaml" -}}
   {{- $_ := set $args "datasource.url" $app.datasource.url -}}
   {{- if or $app.datasource.basicAuth.password $app.datasource.basicAuth.username -}}
     {{- $_ := set $args "datasource.basicAuth.password" $app.datasource.basicAuth.password -}}
