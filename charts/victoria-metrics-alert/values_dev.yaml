@@ -202,7 +202,7 @@ server:
 
   # -- Extra Volumes for the pod
   extraVolumes:
-    - name: nfs-fs
+    - name: alerts-config
       persistentVolumeClaim:
         claimName: nfs-sla-pvc
     #- name: example
@@ -211,8 +211,7 @@ server:
 
   # -- Extra Volume Mounts for the container
   extraVolumeMounts:
-    - name: nfs-fs
-      mountPath: /config
+    []
     # - name: example
     #   mountPath: /example
 
