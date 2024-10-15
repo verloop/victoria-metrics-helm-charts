@@ -204,7 +204,7 @@ server:
   extraVolumes:
     - name: nfs-fs
       persistentVolumeClaim:
-        claimName: nfs-common-pvc
+        claimName: nfs-sla-pvc
     #- name: example
     #  configMap:
     #    name: example
