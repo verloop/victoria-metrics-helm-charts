@@ -212,7 +212,7 @@ server:
   # -- Extra Volume Mounts for the container
   extraVolumeMounts:
     - name: nfs-fs
-     mountPath: /custom-config
+      mountPath: /custom-config
     # - name: example
     #   mountPath: /example
 
