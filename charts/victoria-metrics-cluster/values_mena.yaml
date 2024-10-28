@@ -1041,7 +1041,7 @@ vmstorage:
     # -- Maximum replicas for HPA to use to to scale the vmstorage component
     maxReplicas: 10
     # -- Minimum replicas for HPA to use to scale the vmstorage component
-    minReplicas: 2
+    minReplicas: 1
     # -- Metric for HPA to use to scale the vmstorage component
     metrics: []
     # -- Behavior settings for scaling by the HPA
