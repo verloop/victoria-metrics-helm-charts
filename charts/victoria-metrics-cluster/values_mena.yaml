@@ -968,7 +968,7 @@ vmstorage:
   # -- Pod’s additional labels
   podLabels: {}
   # -- Count of vmstorage pods
-  replicaCount: 2
+  replicaCount: 1
   # -- Container workdir
   containerWorkingDir: ""
   # -- Deploy order policy for StatefulSet pods
