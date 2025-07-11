@@ -364,7 +364,7 @@ vminsert:
     envflag.enable: "true"
     envflag.prefix: VM_
     loggerFormat: json
-    loggerLevel: "DEBUG"
+    loggerLevel: "INFO"
   # -- StatefulSet/Deployment annotations
   annotations: {}
   # -- StatefulSet/Deployment additional labels
@@ -853,7 +853,7 @@ vmstorage:
     envflag.enable: "true"
     envflag.prefix: VM_
     loggerFormat: json
-    loggerLevel: "DEBUG"
+    loggerLevel: "INFO"
 
   # -- Additional hostPath mounts
   extraHostPathMounts:
